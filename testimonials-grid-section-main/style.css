@@ -1,0 +1,179 @@
+/* importing google fonts barlow semi condensed */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/*  variables for fonts and color */
+:root {
+  /* Primary color */
+
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Verydark-grayish-blue: hsl(217, 19%, 35%);
+  --Verydark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ## Neutral color */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* fonts  */
+
+  --barlow-semi-condensed: "Barlow Semi Condensed", sans-serif;
+}
+/* default css of front-end mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* reseting default css of browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--barlow-semi-condensed);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-grayish-blue);
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 80vw;
+  align-content: center;
+  justify-items: center;
+}
+
+.testimonial-container .card .client-details {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  max-height: 80px;
+}
+
+.testimonial-container .card .client-details .client-img img {
+  width: 35px;
+  border-radius: 50%;
+  border: 3px solid var(--Light-gray);
+}
+
+.testimonial-container .card .client-details .client-info h2 {
+  font-size: 1rem;
+  color: var(--White);
+  font-weight: 700;
+}
+
+.testimonial-container
+  .card
+  .client-details
+  .client-info
+  .client-qualification {
+  font-size: 1rem;
+  color: var(--Light-gray);
+}
+
+.testimonial-container .card .testimonial-content h3 {
+  font-size: 1.4rem;
+  color: var(--White);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-container .card .testimonial-content p {
+  font-size: 0.9rem;
+  color: var(--Light-gray);
+  line-height: 1.3rem;
+  font-weight: 500;
+  word-spacing: 1px;
+}
+
+.testimonial-container .card {
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  max-height: 1005;
+  background-color: var(--White);
+}
+
+.testimonial-container .card:nth-child(1) {
+  background-color: var(--Moderate-violet);
+  grid-area: 1/1/2/3;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 55ch top;
+}
+
+.testimonial-container .card:nth-child(2) {
+  background-color: var(--Verydark-grayish-blue);
+}
+
+.testimonial-container .card:nth-child(3) {
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+.testimonial-container .card:nth-child(5) {
+    grid-area: 2 / 2 / 3 / 4;
+    background-color: var(--Verydark-blackish-blue);
+  }
+
+.testimonial-container .card:nth-child(3) .testimonial-content h3,
+.testimonial-container .card:nth-child(4) .testimonial-content h3,
+.testimonial-container .card:nth-child(3) .testimonial-content p,
+.testimonial-container .card:nth-child(4) .testimonial-content p,
+.testimonial-container .card:nth-child(3) .client-details .client-info h2,
+.testimonial-container .card:nth-child(4) .client-details .client-info h2 {
+  color: var(--Verydark-grayish-blue);
+}
+
+
+
+@media screen and (max-width: 375px) {
+  .testimonial-container{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto ;
+    max-width: 90vw;
+    
+  }
+
+  
+
+   .testimonial-container .card{
+    height: fit-content;
+   }
+
+   .testimonial-container .card:nth-child(1) {
+    background-color: var(--Moderate-violet);
+    grid-area: 1/1/2/2;
+   
+  }
+
+  .testimonial-container .card:nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .testimonial-container .card:nth-child(3) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .testimonial-container .card:nth-child(4) {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .testimonial-container .card:nth-child(5) {
+    grid-area: 5 / 1 / 6 / 2;
+    background-color: var(--Verydark-blackish-blue);
+  }
+
+}
